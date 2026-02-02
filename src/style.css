@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b1020;
+  color: white;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #050916;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #1e6bff;
+  margin-bottom: 30px;
+}
+
+.logo span {
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  flex: 1;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.menu li.active {
+  background: #1e6bff;
+  color: white;
+}
+
+.resign {
+  color: red;
+  font-size: 14px;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.top-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-bar p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.top-bar small {
+  color: #aaa;
+}
+
+/* Chessboard */
+.board-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 420px;
+  height: 420px;
+  border: 8px solid #5a3a1c;
+  background: #5a3a1c;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+}
+
+.square.light {
+  background: #f3eed9;
+}
+
+.square.dark {
+  background: #7a4a23;
+}
+
+/* Bottom bar */
+.bottom-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 260px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player img {
+  border-radius: 50%;
+}
+
+.timer {
+  background: #1e6bff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+}
